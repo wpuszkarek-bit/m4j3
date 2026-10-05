@@ -1,0 +1,79 @@
+/* Zadanie 1. Stylowanie listy */
+ul.custom-list {
+  margin: 0; /* usunięcie domyślnych marginesów */
+  padding-left: 20px; /* własne wcięcie */
+  list-style-type: square; /* kwadratowe znaczniki */
+}
+
+ul.custom-list li {
+  margin-bottom: 8px; /* odstęp 8 px między elementami */
+  transition: transform 0.2s ease; /* płynne przesunięcie */
+}
+
+ul.custom-list li:hover {
+  transform: translateX(5px); /* przesunięcie o 5 px w prawo */
+}
+
+
+/* Zadanie 2. ::marker */
+ul.custom-list li::marker {
+  font-size: 1.3rem; /* zmiana wielkości znacznika */
+  font-weight: bold; /* zmiana grubości znacznika */
+  color: #3b82f6;
+}
+
+ol.numbered-list li::marker {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #10b981;
+}
+
+
+/* Zadanie 3. Menu responsywne */
+.nav-menu {
+  display: flex;
+  gap: 16px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-menu a {
+  text-decoration: none;
+  color: #333333;
+  padding: 8px 12px;
+  border-radius: 4px;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.nav-menu a:hover {
+  background-color: #2563eb;
+  color: #ffffff; /* czytelny stan hover */
+}
+
+@media (max-width: 600px) {
+  .nav-menu {
+    flex-direction: column; /* zmiana kierunku na pionowy */
+  }
+}
+
+
+/* Zadanie 4. Klasy stanów */
+.item {
+  transition: opacity 0.3s ease, text-decoration 0.3s ease, color 0.3s ease; /* płynna zmiana stanu */
+}
+
+.aktywne {
+  color: #2563eb;
+  font-weight: bold;
+}
+
+.wykonane {
+  text-decoration: line-through; /* przekreślenie tekstu */
+  opacity: 0.5; /* zmniejszenie opacity */
+}
+
+.blad {
+  color: #dc2626;
+  background-color: #fef2f2;
+}
