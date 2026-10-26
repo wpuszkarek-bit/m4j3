@@ -1,0 +1,260 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+    background-color: #f0f2f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 15px;
+}
+
+.container {
+    background-color: #ffffff;
+    max-width: 520px;
+    width: 100%;
+    padding: 24px;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+h1 {
+    margin-bottom: 16px;
+    color: #1a1a1a;
+    font-size: 22px;
+    text-align: center;
+}
+
+/* Statystyki prób */
+.stats-bar {
+    background-color: #eef2f7;
+    border-radius: 6px;
+    padding: 8px 12px;
+    font-size: 13px;
+    color: #495057;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 16px;
+}
+
+label {
+    display: block;
+    margin-bottom: 6px;
+    color: #333333;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="password"],
+input[type="date"],
+select,
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #cccccc;
+    border-radius: 8px;
+    font-size: 15px;
+    background-color: #ffffff;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    -webkit-appearance: none;
+}
+
+textarea {
+    resize: vertical;
+}
+
+/* Stan błędnego pola (czerwone obramowanie) */
+.input-invalid {
+    border-color: #d9534f !important;
+    background-color: #fff8f8;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: #0066cc;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(0, 102, 204, 0.15);
+}
+
+/* Pole hasła z przyciskiem */
+.password-wrapper {
+    display: flex;
+    gap: 8px;
+}
+
+.password-wrapper input {
+    flex: 1;
+}
+
+.btn-toggle-pw {
+    padding: 0 14px;
+    background-color: #e9ecef;
+    color: #495057;
+    border: 1px solid #ced4da;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: background-color 0.2s;
+}
+
+.btn-toggle-pw:hover {
+    background-color: #dee2e6;
+}
+
+.checkbox-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.checkbox-group input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+}
+
+.checkbox-group label {
+    margin-bottom: 0;
+    font-weight: normal;
+    cursor: pointer;
+}
+
+.char-counter {
+    font-size: 12px;
+    color: #6c757d;
+    text-align: right;
+    margin-top: 4px;
+}
+
+.error-msg {
+    color: #d9534f;
+    font-size: 12px;
+    display: block;
+    margin-top: 4px;
+    min-height: 16px;
+}
+
+.welcome-msg {
+    margin-top: 16px;
+    font-weight: 600;
+    color: #2b542c;
+    text-align: center;
+}
+
+/* Przyciski w formularzu */
+.actions-group {
+    display: flex;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+button[type="submit"],
+.btn-primary {
+    flex: 2;
+    padding: 14px;
+    background-color: #0066cc;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+button[type="submit"]:hover,
+.btn-primary:hover {
+    background-color: #0052a3;
+}
+
+/* Ładniejszy przycisk wyczyść */
+.btn-reset {
+    flex: 1;
+    padding: 14px;
+    background-color: #ffffff;
+    color: #6c757d;
+    border: 1px solid #ced4da;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s, color 0.2s, border-color 0.2s;
+}
+
+.btn-reset:hover {
+    background-color: #f8f9fa;
+    color: #343a40;
+    border-color: #adb5bd;
+}
+
+/* Tabela podsumowania (PHP) */
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 16px 0;
+    font-size: 14px;
+}
+
+.data-table th,
+.data-table td {
+    padding: 10px 12px;
+    border: 1px solid #dee2e6;
+    text-align: left;
+}
+
+.data-table th {
+    background-color: #f1f3f5;
+    color: #343a40;
+    width: 35%;
+}
+
+.btn-link {
+    display: block;
+    width: 100%;
+    text-align: center;
+    background-color: #0066cc;
+    color: white;
+    padding: 12px;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.btn-link:hover {
+    background-color: #0052a3;
+}
+
+/* Responsywność mobilna */
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+
+    .container {
+        padding: 18px;
+    }
+
+    .actions-group {
+        flex-direction: column;
+    }
+
+    button[type="submit"],
+    .btn-reset {
+        width: 100%;
+    }
+}
