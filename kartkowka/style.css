@@ -20,10 +20,10 @@ form {
     background-color: #f9f9f9;
     gap: 10px;
 }
-input[type="text"] :focus, 
-textarea:focus {
+input[type="text"]:focus,textarea:focus {
     border-color: #099d09;
     box-shadow: 0 0 5px rgba(9, 157, 9, 0.5);
+    outline: none;
 }
 
 input[type="text"],textarea {
